@@ -1,7 +1,7 @@
 import React from 'react';
 import IPageProps from '../interfaces/page';
 
-const EditPage: React.FunctionComponent<IPageProps> = props => {
+const EditPage: React.FC<IPageProps> = props => {
     return (
         <p>Edit Page</p>
     )

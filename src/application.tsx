@@ -4,7 +4,7 @@ import routes from './config/routes'
 
 export interface IApplicationProps {}
 
-const Application: React.FunctionComponent<IApplicationProps> = props => {
+const Application: React.FC<IApplicationProps> = props => {
     return (
         <Routes>
             {routes.map((route, index) =>{

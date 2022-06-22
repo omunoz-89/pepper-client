@@ -1,7 +1,7 @@
 import React from 'react';
 import IPageProps from '../interfaces/page';
 
-const LoginPage: React.FunctionComponent<IPageProps> = props => {
+const LoginPage: React.FC<IPageProps> = props => {
     return (
         <p>Login Page</p>
     )
