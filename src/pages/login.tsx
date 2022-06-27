@@ -7,6 +7,7 @@ import firebase from 'firebase/app';
 import { Authenticate, SignInWithSocialMedia } from '../modules/auth';
 import UserContext from '../contexts/user';
 
+
 const LoginPage: React.FunctionComponent<{}> = props => {
     const [authenticating, setAuthenticating] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
@@ -46,7 +47,6 @@ const LoginPage: React.FunctionComponent<{}> = props => {
                             else if (_user)
                             {
                                 userContext.userDispatch({ type: 'login', payload: { user: _user, fire_token } })
-                                history.push('/');
                             }
                         });
                     } 
@@ -83,7 +83,6 @@ const LoginPage: React.FunctionComponent<{}> = props => {
                     {isLogin ? 'Login' : 'Sign Up'}
                 </CardHeader>
                 <CardBody>
-                    <ErrorText error={error} />
                     <Button
                         block
                         disabled={authenticating}
